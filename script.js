@@ -2,7 +2,13 @@ function deltaPositivo(delta, a, b) {
     let r1 = (-b + Math.sqrt(delta)) / (2 * a);
     let r2 = (-b - Math.sqrt(delta)) / (2 * a);
     
-    document.getElementById("resultado").innerHTML = `\\(F_n = C_1 * (${r1.toFixed(2)})^n + C_2 * (${r2.toFixed(2)})^n\\)`;
+    document.getElementById("resultado").innerHTML = `
+        <div class="resultado-centralizado">
+            <p>Para \\( \\Delta > 0 \\):</p>
+            <p>\\(
+            F_n = C_1 \\cdot (${r1.toFixed(2)})^n + C_2 \\cdot (${r2.toFixed(2)})^n
+            \\)</p>
+        </div>`;
     document.getElementById("resultado").style.display = 'inline-block';
     MathJax.typeset(); 
 }
@@ -10,7 +16,13 @@ function deltaPositivo(delta, a, b) {
 function deltaZero(a, b) {
     let r = -b / (2 * a);
     
-    document.getElementById("resultado").innerHTML = `\\(F_n = C_1 * (${r.toFixed(2)})^n + C_2 * n * (${r.toFixed(2)})^n\\)`;
+    document.getElementById("resultado").innerHTML = `
+        <div class="resultado-centralizado">
+            <p>Para \\( \\Delta = 0 \\):</p>
+            <p>\\(
+            F_n = C_1 \\cdot (${r.toFixed(2)})^n + C_2 \\cdot n \\cdot (${r.toFixed(2)})^n
+            \\)</p>
+        </div>`;
     document.getElementById("resultado").style.display = 'inline-block';
     MathJax.typeset(); 
 }
@@ -22,7 +34,13 @@ function deltaNegativo(delta, a, b) {
     let r = Math.sqrt(Math.pow(inteiro, 2) + Math.pow(imag, 2));
     let angulo = Math.atan(imag / inteiro) * (180 / Math.PI);
 
-    document.getElementById("resultado").innerHTML = `\\(F_n = ${r.toFixed(2)}^n * [k_1 \\cdot \\cos(n \\cdot ${angulo.toFixed(2)}^\\circ) + k_2 \\cdot \\sin(n \\cdot ${angulo.toFixed(2)}^\\circ)]\\)`;
+    document.getElementById("resultado").innerHTML = `
+        <div class="resultado-centralizado">
+            <p>Para \\( \\Delta < 0 \\):</p>
+            <p>\\(
+            F_n = ${r.toFixed(2)}^n \\cdot \\left[ k_1 \\cdot \\cos(n \\cdot ${angulo.toFixed(2)}^\\circ) + k_2 \\cdot \\sin(n \\cdot ${angulo.toFixed(2)}^\\circ) \\right]
+            \\)</p>
+        </div>`;
     document.getElementById("resultado").style.display = 'inline-block';
     MathJax.typeset(); 
 }

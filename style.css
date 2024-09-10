@@ -79,3 +79,7 @@ input[type=text] {
     color: #a74caf;
     font-size: 1.2rem;
 }
+
+.resultado-centralizado {
+    text-align: center;
+}
