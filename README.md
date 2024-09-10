@@ -1,6 +1,6 @@
 Trabalho para a disciplina de Matemática Discreta com o objetivo de construir uma aplicação para cálculo de equações de recorrência de segunda ordem.
 
-Grupo:
+Grupo:<br />
 VINICIUS GABRIEL LIMA DE OLIVEIRA<br />
 JOÁS GABRIEL BARROS DE SOUSA<br />
 FRANCINALDO MANOEL DOS ANJOS JUNIOR<br />
